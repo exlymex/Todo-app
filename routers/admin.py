@@ -1,9 +1,9 @@
 from typing import Annotated
 from sqlalchemy.orm import Session
 from fastapi import Depends, HTTPException, Path, APIRouter
-from models import Todos
-from database import SessionLocal
 from starlette import status
+from ..models import Todos
+from ..database import SessionLocal
 from .auth import get_current_user
 
 router = APIRouter(
